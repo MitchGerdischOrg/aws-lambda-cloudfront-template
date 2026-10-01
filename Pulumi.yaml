@@ -1,0 +1,13 @@
+name: ${PROJECT}
+description: ${DESCRIPTION}
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+template:
+  description: Python Lambda function (function URL) fronted by CloudFront, with Pulumi Deployments settings
+  config:
+    agentPoolId:
+      description: Pulumi Deployments agent pool ID, or 'pulumi-provided-runners' to use Pulumi Cloud hosted runners
+      default: pulumi-provided-runners
